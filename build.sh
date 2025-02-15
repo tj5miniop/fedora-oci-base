@@ -10,7 +10,14 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf install -y tmux 
+dnf5 -y copr enable bieszczaders/kernel-cachyos 
+dnf5 -y install kernel-cachyos
+dnf5 -y clean all 
+dnf5 -y remove kernel 
+
+dnf5 -y copr disable bieszczaders/kernel-cachyos 
+
+dnf5 -y install fastfetch
 
 # Use a COPR Example:
 #
