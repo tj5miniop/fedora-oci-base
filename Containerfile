@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-bootc:latest
+FROM ghcr.io/ublue-os/sericea-main:latest
 
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
